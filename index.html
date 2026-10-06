@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yamamoto Seiga | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #cfe8ff;
+    --ink: #1d2340;
+    --panel: #ffffff;
+    --coral: #ff6b6b;
+    --sun: #ffd23f;
+    --mint: #3ddc97;
+  }
+  * { box-sizing: border-box; }
+  html { image-rendering: pixelated; }
+  body {
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: var(--sky);
+    color: var(--ink);
+    font-family: "DotGothic16", "Hiragino Sans", "Yu Gothic", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .box {
+    background: var(--panel);
+    border: 4px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+    padding: 24px;
+    margin-bottom: 40px;
+  }
+  .hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .chip { flex: none; width: 112px; height: 112px; }
+  h1 {
+    font-family: "Press Start 2P", "DotGothic16", monospace;
+    font-size: clamp(18px, 5vw, 28px);
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .cursor {
+    display: inline-block;
+    width: 0.6em; height: 1em;
+    background: var(--coral);
+    vertical-align: -0.1em;
+    margin-left: 6px;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  h2 {
+    font-family: "Press Start 2P", "DotGothic16", monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    display: inline-block;
+    background: var(--sun);
+    border: 4px solid var(--ink);
+    padding: 8px 12px;
+  }
+  p { margin: 0 0 8px; }
+  .works { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+  .slot {
+    border: 4px dashed var(--ink);
+    min-height: 120px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 12px;
+  }
+  a { color: var(--ink); background: var(--mint); padding: 2px 8px; border: 3px solid var(--ink); text-decoration: none; }
+  a:hover { background: var(--sun); }
+  a:focus-visible { outline: 4px solid var(--coral); outline-offset: 2px; }
+  footer { text-align: center; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <section class="box hero">
+    <svg class="chip" viewBox="0 0 14 14" shape-rendering="crispEdges" role="img" aria-label="ピクセルアートのマイコンチップ">
+      <g fill="#1d2340">
+        <rect x="3" y="3" width="8" height="8"/>
+        <rect x="4" y="1" width="1" height="2"/><rect x="6" y="1" width="1" height="2"/><rect x="8" y="1" width="1" height="2"/><rect x="10" y="1" width="1" height="2"/>
+        <rect x="4" y="11" width="1" height="2"/><rect x="6" y="11" width="1" height="2"/><rect x="8" y="11" width="1" height="2"/><rect x="10" y="11" width="1" height="2"/>
+        <rect x="1" y="4" width="2" height="1"/><rect x="1" y="6" width="2" height="1"/><rect x="1" y="8" width="2" height="1"/><rect x="1" y="10" width="2" height="1"/>
+        <rect x="11" y="4" width="2" height="1"/><rect x="11" y="6" width="2" height="1"/><rect x="11" y="8" width="2" height="1"/><rect x="11" y="10" width="2" height="1"/>
+      </g>
+      <rect x="4" y="4" width="6" height="6" fill="#3ddc97"/>
+      <rect x="5" y="5" width="2" height="2" fill="#ffd23f"/>
+      <rect x="8" y="8" width="1" height="1" fill="#ff6b6b"/>
+    </svg>
+    <div>
+      <h1>Yamamoto<br>Seiga<span class="cursor" aria-hidden="true"></span></h1>
+      <p>Portfolio</p>
+    </div>
+  </section>
+
+  <section class="box">
+    <h2>About</h2>
+    <p>茨城高専 電気電子系卒（2026年度）</p>
+  </section>
+
+  <section class="box">
+    <h2>Works</h2>
+    <div class="works">
+      <div class="slot">制作物は準備中です</div>
+      <div class="slot">次の作品を追加予定</div>
+    </div>
+  </section>
+
+  <section class="box">
+    <h2>Links</h2>
+    <p><a href="https://github.com/y-seiga">GitHub</a></p>
+  </section>
+
+  <footer>&copy; 2026 Yamamoto Seiga</footer>
+</main>
+</body>
+</html>
